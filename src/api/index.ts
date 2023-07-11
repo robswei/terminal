@@ -2,11 +2,9 @@ import axios from 'axios';
 import config from '../../config.json';
 
 export const getProjects = async () => {
-  const { data } = await axios.get(
-    `https://api.github.com/users/${config.social.github}/repos`,
-  );
+  const response = await fetch(`/api/github?username=${config.social.github}`);
 
-  return data;
+  return response.json();
 };
 
 export const getBio = async () => {
