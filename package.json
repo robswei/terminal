@@ -7,10 +7,6 @@
     "url": "https://robswei.com",
     "email": "hello@robswei.com"
   },
-  "funding": {
-    "type": "Paypal",
-    "url": "https://paypal.me/y4ss1n3"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/robswei/terminal"
