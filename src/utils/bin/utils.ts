@@ -1,4 +1,5 @@
 import packageJson from '../../../package.json';
+import config from '../../../config.json';
 import * as bin from './index';
 
 export const help = async (args: string[]): Promise<string> => {
@@ -20,7 +21,7 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const gui = async (args: string[]): Promise<string> => {
-  window.open('https://read.cv/robswei');
+  window.open(config.resume);
 
   return 'Opening GUI version...';
 };
@@ -69,5 +70,6 @@ export const banner = (args?: string[]): string => {
 ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝        ╚══╝╚══╝ ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
 
 Type 'help' to see list of available commands.
+Type 'gui' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.resume}" target="_blank">here</a></u> for a simpler version
 `;
 };
